@@ -1,0 +1,112 @@
+/* src/styles/Events.css */
+.events-page {
+    min-height: 100vh;
+  }
+  
+  .events-hero {
+    height: 40vh;
+    background-color: #8c7851; /* Using primary color instead of image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    text-align: center;
+  }
+  
+  .events-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+  
+  .events-categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .host-event {
+    background-color: var(--color-light-gray);
+  }
+  
+  .host-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  
+  /* Placeholder for host event image */
+  .host-image {
+    background-color: var(--color-medium-gray);
+    height: 300px;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+  }
+  
+  .subscribe {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+  }
+  
+  .subscribe h2 {
+    color: var(--color-white);
+  }
+  
+  .subscribe-form {
+    display: flex;
+    max-width: 500px;
+    margin: var(--spacing-lg) auto 0;
+  }
+  
+  .subscribe-form input {
+    flex: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+  }
+  
+  .subscribe-form button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: var(--color-secondary);
+  }
+  
+  @media (max-width: 768px) {
+    .events-hero {
+      height: 30vh;
+    }
+    
+    .host-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .host-image {
+      margin-bottom: var(--spacing-lg);
+      order: -1;
+    }
+    
+    .subscribe-form {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+    
+    .subscribe-form input,
+    .subscribe-form button {
+      width: 100%;
+      border-radius: var(--border-radius-sm);
+    }
+  }

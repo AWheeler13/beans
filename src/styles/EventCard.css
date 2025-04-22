@@ -1,0 +1,51 @@
+/* src/styles/EventCard.css */
+.event-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .event-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .event-card:hover .event-image img {
+    transform: scale(1.05);
+  }
+  
+  .event-content {
+    padding: var(--spacing-md);
+  }
+  
+  .event-content h3 {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: var(--font-lg);
+  }
+  
+  .event-details {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-secondary);
+    font-size: var(--font-sm);
+  }
+  
+  .event-description {
+    color: var(--color-light-text);
+    margin-bottom: var(--spacing-md);
+  }

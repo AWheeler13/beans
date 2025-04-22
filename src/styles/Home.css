@@ -1,0 +1,75 @@
+/* src/styles/Home.css */
+.intro-section {
+    background-color: var(--color-white);
+  }
+  
+  .intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  
+  .intro-image img {
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .featured-menu-section {
+    background-color: var(--color-light-gray);
+  }
+  
+  .featured-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .view-full-menu {
+    text-align: center;
+  }
+  
+  .testimonials-section {
+    background-color: var(--color-white);
+    text-align: center;
+  }
+  
+  .testimonials-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .cta-section {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  .cta-section h2 {
+    color: var(--color-white);
+  }
+  
+  .cta-section .btn {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  }
+  
+  .cta-section .btn:hover {
+    background-color: var(--color-light-gray);
+  }
+  
+  @media (max-width: 768px) {
+    .intro-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .intro-image {
+      order: -1;
+    }
+  }
+  

@@ -1,0 +1,116 @@
+/* src/styles/Contact.css */
+.contact-page {
+    min-height: 100vh;
+  }
+  
+  .contact-hero {
+    height: 40vh;
+    background-color: #5a6268; /* Using secondary color instead of image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    text-align: center;
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .info-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+  }
+  
+  .info-card i {
+    font-size: var(--font-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .info-card h3 {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .info-card p {
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-sm);
+  }
+  
+  .info-card.social .social-icons {
+    justify-content: center;
+    margin-top: var(--spacing-sm);
+  }
+  
+  .contact-form-container {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+    text-align: center;
+  }
+  
+  /* Placeholder for map */
+  .map {
+    margin-top: var(--spacing-lg);
+    height: 450px;
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-medium-gray);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: var(--font-xl);
+  }
+  
+  @media (max-width: 992px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-2xl);
+    }
+    
+    .contact-info {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-hero {
+      height: 30vh;
+    }
+    
+    .map {
+      height: 300px;
+    }
+  }
