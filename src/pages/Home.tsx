@@ -39,7 +39,7 @@ const Home: React.FC = () => {
             </div>
             <div className="intro-text">
               <p>Nestled in between Sanford and Winter Springs, Beans and Roots offers a unique alternative to the conventional bar scene. Our kava bar provides a relaxing environment where you can unwind, socialize, and enjoy the calming effects of kava and other botanical beverages.</p>
-              <p>We pride ourselves on sourcing the highest quality kava roots and herbs to create beverages that promote relaxation and well-being. Whether you're a kava connoisseur or curious newcomer, our knowledgeable staff will guide you through our menu to find your perfect match.</p>
+              <p>We pride ourselves on sourcing the highest quality kava roots and botanial tea to create beverages that promote relaxation and well-being. Whether you're a kava connoisseur or curious newcomer, our knowledgeable staff will guide you through our menu to find your perfect match.</p>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
       <section className="cta-section">
         <div className="container">
           <h2>Join Our Community</h2>
-          <p>Visit us today to experience the relaxing benefits of kava in a welcoming environment. Check out our events calendar for special gatherings, live music, and workshops.</p>
+          <p>Visit us today to experience the relaxing benefits of kava in a welcoming environment. Check out our events calendar for special gatherings, promotions and everything special happening at Beans and Roots.</p>
           <a href="/events" className="btn btn-primary">Upcoming Events</a>
         </div>
       </section>

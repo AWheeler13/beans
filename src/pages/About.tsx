@@ -18,22 +18,15 @@ const About: React.FC = () => {
           <h2>Our Story</h2>
           <div className="story-content">
             <div className="story-image">
-              {/* Placeholder div instead of image */}
-              <div style={{
-                height: '300px',
-                backgroundColor: '#8c7851',
-                borderRadius: 'var(--border-radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                fontWeight: 'bold'
-              }}>
-                Founder Photo
-              </div>
+              {/* Real image instead of placeholder */}
+              <img 
+                src="https://imagizer.imageshack.com/v2/413x517q70/923/FEvRRm.png" 
+                alt="Clairia Vaughn - Founder" 
+                className="founder-image"
+              />
             </div>
             <div className="story-text">
-              <p>Beans and Roots was founded in 2018 by Alex Morgan, a traveler who discovered the calming effects of kava during a trip to Fiji. Inspired by the communal kava ceremonies and the sense of connection they fostered, Alex wanted to bring that same experience back home.</p>
+              <p>Beans and Roots was founded in 2025 by Clairia Vaughn in Sanford, Florida.</p>
               <p>What started as a small pop-up kava bar has grown into a beloved community space where people come to relax, socialize, and enjoy botanical beverages in a welcoming, alcohol-free environment.</p>
               <p>Our name "Beans and Roots" pays homage to the roots of the kava plant and the coffee beans that inspire our warm, café-like atmosphere. We've created a space that bridges traditional kava culture with modern comfort.</p>
             </div>
@@ -50,7 +43,7 @@ const About: React.FC = () => {
               <div className="mission-point">
                 <i className="fas fa-leaf"></i>
                 <h3>Quality & Sustainability</h3>
-                <p>We source only the highest quality kava and kratom from farmers who use sustainable growing practices.</p>
+                <p>We source only the highest quality kava and coffee from farmers who take pride in their products.</p>
               </div>
               <div className="mission-point">
                 <i className="fas fa-users"></i>
@@ -59,8 +52,8 @@ const About: React.FC = () => {
               </div>
               <div className="mission-point">
                 <i className="fas fa-book"></i>
-                <h3>Education</h3>
-                <p>We're dedicated to educating our customers about kava, kratom, and other botanical beverages, their traditions, and their benefits.</p>
+                <h3>Tradition</h3>
+                <p>We're dedicated to educating our customers about kava, coffee, and other botanical beverages, their traditions, and their benefits.</p>
               </div>
             </div>
           </div>
@@ -73,22 +66,12 @@ const About: React.FC = () => {
           <div className="team-grid">
             {teamMembers.map(member => (
               <div className="team-member" key={member.id}>
-                {/* Placeholder div instead of image */}
-                <div style={{
-                  width: '150px',
-                  height: '150px',
-                  borderRadius: '50%',
-                  backgroundColor: '#c19a6b',
-                  margin: '0 auto var(--spacing-md)',
-                  border: '4px solid var(--color-white)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'white',
-                  fontWeight: 'bold'
-                }}>
-                  {member.name.split(' ').map(name => name[0]).join('')}
-                </div>
+                {/* Using actual images instead of placeholders */}
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="team-member-image"
+                />
                 <h3>{member.name}</h3>
                 <p className="position">{member.position}</p>
                 <p>{member.bio}</p>

@@ -1,68 +1,92 @@
 /* src/styles/Menu.css */
 .menu-page {
-    min-height: 100vh;
-  }
-  
+  min-height: 100vh;
+}
+
+.menu-hero {
+  height: 40vh;
+  background-color: #5a6268; /* Using secondary color instead of image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.category-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  background-color: var(--color-light-gray);
+  color: var(--color-text);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  /* Make buttons wider to accommodate longer category names */
+  min-width: 120px;
+  text-align: center;
+}
+
+.category-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.menu-info {
+  background-color: var(--color-light-gray);
+  padding: var(--spacing-2xl) 0;
+}
+
+.menu-info-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
   .menu-hero {
-    height: 40vh;
-    background-color: #5a6268; /* Using secondary color instead of image */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-white);
-    text-align: center;
-  }
-  
-  .menu-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-2xl) var(--spacing-lg);
+    height: 30vh;
   }
   
   .menu-categories {
-    display: flex;
-    justify-content: center;
-    margin-bottom: var(--spacing-xl);
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
+    flex-direction: column;
+    align-items: center;
   }
   
   .category-btn {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border: none;
-    background-color: var(--color-light-gray);
-    color: var(--color-text);
-    border-radius: var(--border-radius-md);
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 250px;
   }
-  
-  .category-btn.active {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-  }
-  
-  .menu-items-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-2xl);
-  }
-  
-  .menu-info {
-    background-color: var(--color-light-gray);
-    padding: var(--spacing-2xl) 0;
-  }
-  
-  .menu-info-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  @media (max-width: 768px) {
-    .menu-hero {
-      height: 30vh;
-    }
-  }
+}
+
+/* Added for specific menu category styling */
+.category-heading {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  text-align: center;
+  font-size: var(--font-xl);
+  font-weight: 600;
+}

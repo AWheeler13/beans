@@ -45,15 +45,17 @@
     align-items: center;
   }
   
-  /* Placeholder for host event image */
-  .host-image {
-    background-color: var(--color-medium-gray);
-    height: 300px;
+  .host-image img {
     border-radius: var(--border-radius-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .private-event-image {
+    max-width: 100%;
+    object-fit: cover;
   }
   
   .subscribe {

@@ -13,18 +13,33 @@
 }
 
 .menu-item-image {
-  height: 300px; /* You can adjust this height as needed */
+  height: 300px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .menu-item-image img {
-  width: 75%;
+  width: 65%;
   height: 95%;
-  object-fit: fill; /* This is the key property - ensures the image fits without being cut off */
+  object-fit: fill;
   transition: transform 0.3s ease;
+  position: relative; /* Needed to make sure the image is above background */
+  z-index: 1;
+}
+
+.menu-item-image::after {
+  content: '';
+  position: absolute;
+  top: 2.5%; /* Adjusted to match image positioning */
+  left: 17.5%; /* Adjusted to match image positioning */
+  width: 65%;
+  height: 95%;
+  box-shadow: inset 0 0 0 3px #8c7851;
+  z-index: 2;
+  pointer-events: none; /* Makes sure clicks pass through to the image */
 }
 
 .menu-item:hover .menu-item-image img {

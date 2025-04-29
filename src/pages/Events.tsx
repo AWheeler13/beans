@@ -57,19 +57,12 @@ const Events: React.FC = () => {
           <h2>Host Your Event With Us</h2>
           <div className="host-content">
             <div className="host-image">
-              {/* Placeholder div instead of image */}
-              <div style={{
-                height: '300px',
-                backgroundColor: '#8c7851',
-                borderRadius: 'var(--border-radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                fontWeight: 'bold'
-              }}>
-                Private Event Space
-              </div>
+              {/* Using the provided image instead of placeholder */}
+              <img 
+                src="https://imagizer.imageshack.com/v2/900x675q70/922/iJuMkW.jpg" 
+                alt="Private event space at Beans and Roots" 
+                className="private-event-image"
+              />
             </div>
             <div className="host-text">
               <p>Looking for a unique venue for your next gathering? Beans and Roots offers private event bookings for groups of all sizes.</p>
