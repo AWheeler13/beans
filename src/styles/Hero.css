@@ -1,75 +1,104 @@
 /* src/styles/Hero.css */
 .hero {
-    height: 80vh;
-    background-color: #8c7851; /* Using primary color instead of image */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-white);
-    text-align: center;
-  }
-  
-  .hero-content {
-    max-width: 800px;
-    padding: 0 var(--spacing-lg);
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  text-align: center;
+}
+
+/* Background layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://imageshack.com/i/pn4CZxMij');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.7); /* Darken the image slightly */
+  z-index: -2;
+}
+
+/* Optional: Add a subtle overlay for better text readability */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 var(--spacing-lg);
+  position: relative; /* Ensures content stays above the background */
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: var(--font-3xl);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Enhanced shadow for readability */
+}
+
+.hero h2 {
+  font-size: var(--font-xl);
+  font-weight: 400;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: var(--font-lg);
+  margin-bottom: var(--spacing-xl);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+}
+
+.hero .btn {
+  padding: var(--spacing-md) var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
   }
   
   .hero h1 {
-    font-size: var(--font-3xl);
-    margin-bottom: var(--spacing-sm);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: var(--font-2xl);
   }
   
   .hero h2 {
-    font-size: var(--font-xl);
-    font-weight: 400;
-    margin-bottom: var(--spacing-lg);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: var(--font-lg);
   }
   
   .hero p {
-    font-size: var(--font-lg);
-    margin-bottom: var(--spacing-xl);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: var(--font-md);
   }
   
   .hero-buttons {
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
   }
   
   .hero .btn {
-    padding: var(--spacing-md) var(--spacing-xl);
+    width: 100%;
+    max-width: 250px;
   }
-  
-  @media (max-width: 768px) {
-    .hero {
-      height: 70vh;
-    }
-    
-    .hero h1 {
-      font-size: var(--font-2xl);
-    }
-    
-    .hero h2 {
-      font-size: var(--font-lg);
-    }
-    
-    .hero p {
-      font-size: var(--font-md);
-    }
-    
-    .hero-buttons {
-      flex-direction: column;
-      align-items: center;
-      gap: var(--spacing-sm);
-    }
-    
-    .hero .btn {
-      width: 100%;
-      max-width: 250px;
-    }
-  }
+}

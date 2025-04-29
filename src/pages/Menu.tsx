@@ -43,7 +43,7 @@ const Menu: React.FC = () => {
               key={item.id}
               name={item.name}
               description={item.description}
-              price={item.price}
+              
               category={item.category}
               image={item.image}
               isSpecial={item.isSpecial}

@@ -3,13 +3,27 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Testimonial from '../components/Testimonial';
 import MenuItem from '../components/MenuItem';
-import { menuItems } from '../data/menuItems';
 import { testimonials } from '../data/testimonials';
 import '../styles/Home.css';
 
 const Home: React.FC = () => {
-  // Get featured menu items (first 3 items)
-  const featuredItems = menuItems.slice(0, 3);
+  // Custom featured items with the provided images
+  const featuredItems = [
+    {
+      name: "Botanical Tea",
+      description: "A refreshing blend of organic herbs and botanicals, crafted to provide a soothing and relaxing experience.",
+      category: "specialty",
+      image: "https://imagizer.imageshack.com/v2/450x675q70/922/M63JpP.jpg",
+      isSpecial: true
+    },
+    {
+      name: "Espresso Martini (Alcohol Free)",
+      description: "Our signature non-alcoholic espresso martini combines premium coffee and botanical tea for an uplifting experience.",
+      category: "specialty",
+      image: "https://imagizer.imageshack.com/v2/451x675q70/923/nxu5KK.jpg",
+      isSpecial: true
+    }
+  ];
 
   return (
     <div className="home-page">
@@ -20,22 +34,11 @@ const Home: React.FC = () => {
           <h2>Your Oasis of Calm</h2>
           <div className="intro-content">
             <div className="intro-image">
-              {/* Placeholder div instead of image */}
-              <div style={{
-                height: '300px',
-                backgroundColor: '#c19a6b',
-                borderRadius: 'var(--border-radius-md)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                fontWeight: 'bold'
-              }}>
-                Bar Interior
-              </div>
+              {/* Using the provided image URL instead of placeholder */}
+              <img src="https://imagizer.imageshack.com/v2/619x675q70/924/z7GRAF.png" alt="Beans and Roots Interior" />
             </div>
             <div className="intro-text">
-              <p>Nestled in the heart of Relaxville, Beans and Roots offers a unique alternative to the conventional bar scene. Our kava bar provides a relaxing environment where you can unwind, socialize, and enjoy the calming effects of kava and other botanical beverages.</p>
+              <p>Nestled in between Sanford and Winter Springs, Beans and Roots offers a unique alternative to the conventional bar scene. Our kava bar provides a relaxing environment where you can unwind, socialize, and enjoy the calming effects of kava and other botanical beverages.</p>
               <p>We pride ourselves on sourcing the highest quality kava roots and herbs to create beverages that promote relaxation and well-being. Whether you're a kava connoisseur or curious newcomer, our knowledgeable staff will guide you through our menu to find your perfect match.</p>
             </div>
           </div>
@@ -51,7 +54,6 @@ const Home: React.FC = () => {
                 key={index}
                 name={item.name}
                 description={item.description}
-                price={item.price}
                 category={item.category}
                 image={item.image}
                 isSpecial={item.isSpecial}
